@@ -12,29 +12,13 @@
     <title>Directory</title>
   </head>
   <body>
-  <form  action="index.jsp" method="post">
-  <div>
-    <input type="text" id="idText" height="150px" width="15px" style="border: 1px #CCC solid">
+  <form  action="directory.jsp" method="post">
+
+    <input type="text" name="idText" height="150px" width="15px" style="border: 1px #CCC solid">
     <input type="submit" value="Translate">
-  </div>
+
   </form>
 
-  <%
-    Map<String , String> dic = new HashMap<>();
-    dic.put("Hello" , "Xin chào");
-    dic.put("Dog" , "Chó");
-    dic.put("how", "Thế nào");
-    dic.put("book", "Quyển vở");
-    dic.put("computer", "Máy tính");
 
-    String search = request.getParameter("idText");
-    String rel = dic.get(search);
-    if (rel != null) {
-      out.println("Word: " + search);
-      out.println("Result: " + rel);
-    } else {
-      out.println("Not found");
-    }
-  %>
   </body>
 </html>
